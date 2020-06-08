@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">Smart Home</string>
+
+
+    <string name="thingspeak_get">https://api.thingspeak.com/channels/1026699/feeds.json?results=1</string>
+    <string name="thingspeak_post">https://api.thingspeak.com/update?api_key=ZE2AKHGCQ7RY15AA</string>
+
+</resources>
