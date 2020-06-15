@@ -12,7 +12,7 @@
 
 
 RF24 alici(CE_PIN, CSN_PIN);
-const byte address[6] = "00001";
+const byte address[6] = {"00001"};
 
 struct Data {
 
@@ -42,7 +42,11 @@ void loop() {
 
   if (alici.available()) {
 
+    Serial.println("available");
+
     alici.read(&dataGet, sizeof(dataGet));
+
+    Serial.println("socket: " + String(dataGet.socketValue));
 
     blinkLed(NRF_DATA_LED, BLINK_DELAY);
 

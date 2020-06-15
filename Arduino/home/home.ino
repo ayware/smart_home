@@ -80,6 +80,7 @@ void setup() {
 
 void loop() {
 
+
   // Esp8266 ile bağlantı kontrol ediliyor ve bağlantı mevcut ise veri çekme ve yollama işlemi yapılıyor
   if (connectedEsp()) {
 
@@ -97,6 +98,7 @@ void loop() {
     setupWifiConnection();
 
   }
+
 
 
 

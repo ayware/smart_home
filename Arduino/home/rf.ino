@@ -1,7 +1,7 @@
 
 RF24 radio(RF_CE, RF_CSN);
 
-byte address[6] = {"00001"};
+const byte address[6] = {"00001"};
 
 void initRf() {
 
@@ -20,7 +20,7 @@ void getRfData(struct Data* data) {
 
     while (radio.available()) {
 
-      radio.read(&data, sizeof(data));
+      radio.read(data, sizeof(data));
 
     }
 
@@ -32,6 +32,7 @@ void getRfData(struct Data* data) {
 void sendRfData(struct Data* data) {
 
   radio.stopListening();
-  radio.write(&data, sizeof(data));
+  radio.write(data, sizeof(data));
+  blinkLed(RF_DATA_LED, BLINK_DELAY);
 
 }
